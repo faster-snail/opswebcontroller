@@ -1,0 +1,23 @@
+language: node_js
+
+branches:
+  only:
+    - develop
+
+node_js: stable
+
+cache:
+  directories:
+    - node_modules
+
+addons:
+  apt:
+    packages:
+      - rsync
+
+install:
+  - yarn install
+
+after_success:
+  - yarn run build
+  - rsync -avz dist/ ops@piper.ml:202:/dist/
