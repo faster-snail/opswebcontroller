@@ -2,7 +2,7 @@
     <div>
       <Bar/>
       <div class="bottom-main">
-        <List class="my-list elevation-18"/>
+        <List class="my-list elevation-0"/>
         <v-content>
           <HelloWorld/>
         </v-content>
