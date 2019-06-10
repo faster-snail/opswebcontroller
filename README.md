@@ -3,3 +3,5 @@
 
 ## vue
 使用vuetify ui框架，清新，舒爽，自适应，完美体验手机运维
+
+![avatar](jiemian.png)
