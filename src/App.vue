@@ -1,33 +1,28 @@
 <template>
-  <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-toolbar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+    <div>
+      <Bar/>
+      <div class="bottom-main">
+        <List class="my-list elevation-18"/>
+        <v-content>
+          <HelloWorld/>
+        </v-content>
+      </div>
+      
+    </div>
+   
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
+import Bar from './components/Bar'
+import List from './components/List'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Bar,
+    List
   },
   data () {
     return {
@@ -36,3 +31,19 @@ export default {
   }
 }
 </script>
+<style>
+.my-list {
+  height: 100vh;
+  width: 20%;
+  float: left;
+}
+.v-content {
+  float: right;
+  width: 80%;
+  height: 100vh;
+}
+.bottom-main {
+  margin-top: 5px;
+}
+
+</style>
